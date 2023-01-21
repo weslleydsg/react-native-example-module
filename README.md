@@ -1,6 +1,6 @@
 # @weslleydsg/react-native-example-package
 
-@weslleydsg/react-native-example-package
+react-native-example-package
 
 ## Installation
 
