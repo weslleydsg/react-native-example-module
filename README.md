@@ -1,17 +1,17 @@
-# react-native-example-module
+# @weslleydsg/react-native-example-package
 
-react-native-example-module
+@weslleydsg/react-native-example-package
 
 ## Installation
 
 ```sh
-npm install react-native-example-module
+npm install @weslleydsg/react-native-example-package
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'react-native-example-module';
+import { multiply } from '@weslleydsg/react-native-example-package';
 
 // ...
 

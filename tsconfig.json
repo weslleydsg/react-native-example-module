@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-example-module": ["./src/index"]
+      "@weslleydsg/react-native-example-package": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
