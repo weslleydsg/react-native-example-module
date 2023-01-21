@@ -1,5 +1,5 @@
 {
-  "name": "@weslleydsg/react-native-example-module",
+  "name": "@weslleydsg/react-native-example-package",
   "version": "0.0.0-development",
   "description": "test",
   "main": "lib/commonjs/index",
