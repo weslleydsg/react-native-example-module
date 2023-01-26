@@ -29,6 +29,7 @@
   "scripts": {
     "commit": "cz",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepack": "bob build",
