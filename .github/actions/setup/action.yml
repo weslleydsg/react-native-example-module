@@ -22,6 +22,6 @@ runs:
     - name: Install dependencies
       if: steps.npm-cache.outputs.cache-hit != 'true'
       run: |
-        npm i --cwd example --frozen-lockfile
         npm i --frozen-lockfile
+        cd example && npm i --frozen-lockfile
       shell: bash
