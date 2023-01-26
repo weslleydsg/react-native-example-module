@@ -13,9 +13,9 @@ export default function App() {
   >();
 
   React.useEffect(() => {
-    add(3, 7).then(setAddResult);
-    subtract(3, 7).then(setSubtractResult);
-    multiply(3, 7).then(setMultiplyResult);
+    add({ a: 3, b: 7 }).then(setAddResult);
+    subtract({ a: 3, b: 7 }).then(setSubtractResult);
+    multiply({ a: 3, b: 7 }).then(setMultiplyResult);
   }, []);
 
   return (
