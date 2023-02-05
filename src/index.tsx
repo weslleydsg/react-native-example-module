@@ -14,3 +14,7 @@ export function subtract({ a, b }: OperatorsInput): Promise<number> {
 export function multiply({ a, b }: OperatorsInput): Promise<number> {
   return Promise.resolve(a * b);
 }
+
+export function divide({ a, b }: OperatorsInput): Promise<number> {
+  return Promise.resolve(a / b);
+}
