@@ -24,18 +24,7 @@ jobs:
         with:
           node-version-file: .nvmrc
 
-      - name: Cache dependencies
-        id: npm-release-cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ./node_modules
-          key: ${{ runner.os }}-npm-release-${{ hashFiles('./package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-release-
-
       - name: Install dependencies
-        if: steps.npm-release-cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Release
