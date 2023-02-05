@@ -13,7 +13,7 @@ npm install react-native-example-package
 ```js
 import { utils } from 'react-native-example-package';
 
-const { add, subtract, multiply } = utils.operators;
+const { add, subtract, multiply, divide } = utils.operators;
 
 // ...
 

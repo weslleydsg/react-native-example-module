@@ -3,7 +3,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { utils } from 'react-native-example-package';
 
-const { add, subtract, divide, multiply } = utils.operators;
+const { add, subtract, multiply, divide } = utils.operators;
 
 export default function App() {
   const [addResult, setAddResult] = React.useState<number | undefined>();
