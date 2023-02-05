@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
-import { add, multiply, subtract } from 'react-native-example-package';
+import { add, divide, multiply, subtract } from 'react-native-example-package';
 
 export default function App() {
   const [addResult, setAddResult] = React.useState<number | undefined>();
@@ -11,11 +11,13 @@ export default function App() {
   const [multiplyResult, setMultiplyResult] = React.useState<
     number | undefined
   >();
+  const [divideResult, setDivideResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
     add(3, 7).then(setAddResult);
     subtract(3, 7).then(setSubtractResult);
     multiply(3, 7).then(setMultiplyResult);
+    divide(10, 2).then(setDivideResult);
   }, []);
 
   return (
@@ -23,6 +25,7 @@ export default function App() {
       <Text>Add Result: {addResult}</Text>
       <Text>Subtract Result: {subtractResult}</Text>
       <Text>Multiply Result: {multiplyResult}</Text>
+      <Text>Divide Result: {divideResult}</Text>
     </View>
   );
 }
