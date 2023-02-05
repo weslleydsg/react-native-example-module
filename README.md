@@ -11,13 +11,14 @@ npm install react-native-example-package
 ## Usage
 
 ```js
-import { add, multiply, subtract } from 'react-native-example-package';
+import { add, divide, multiply, subtract } from 'react-native-example-package';
 
 // ...
 
 const addResult = await add(3, 7);
 const subtractResult = await add(3, 7);
 const multiplyResult = await multiply(3, 7);
+const divideResult = await divide(10, 2);
 ```
 
 ## Contributing
