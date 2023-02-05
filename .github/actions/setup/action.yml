@@ -17,11 +17,11 @@ runs:
           **/node_modules
         key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-npm-dependencies
+          ${{ runner.os }}-npm-
 
     - name: Install dependencies
       if: steps.npm-cache.outputs.cache-hit != 'true'
       run: |
-        npm i --cwd example --frozen-lockfile
         npm i --frozen-lockfile
+        cd example && npm i --frozen-lockfile
       shell: bash

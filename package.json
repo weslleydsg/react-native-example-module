@@ -34,8 +34,8 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepack": "bob build",
     "release": "release-it",
-    "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn install",
+    "example": "cd example && npm i && cd ..",
+    "bootstrap": "npm i && npm run example",
     "semantic-release": "semantic-release"
   },
   "keywords": [
