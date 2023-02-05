@@ -17,3 +17,9 @@ export function multiply(...[firstArg, ...restArgs]: Args): number {
     return previousValue * value;
   }, firstArg);
 }
+
+export function divide(...[firstArg, ...restArgs]: Args): number {
+  return restArgs.reduce((previousValue, value) => {
+    return previousValue / value;
+  }, firstArg);
+}
