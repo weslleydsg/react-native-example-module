@@ -18,7 +18,7 @@ export default function App() {
     number | undefined
   >();
   const [divideResult, setDivideResult] = React.useState<number | undefined>();
-  const [equalsResult, setEqualsResult] = React.useState<number | undefined>();
+  const [equalsResult, setEqualsResult] = React.useState<boolean | undefined>();
 
   React.useEffect(() => {
     add({ a: 3, b: 7 }).then(setAddResult);
