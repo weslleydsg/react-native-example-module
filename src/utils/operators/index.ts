@@ -23,3 +23,7 @@ export function divide(...[firstArg, ...restArgs]: Args): number {
     return previousValue / value;
   }, firstArg);
 }
+
+export function equals(...[firstArg, ...restArgs]: Args): boolean {
+  return restArgs.every((value) => value === firstArg);
+}
