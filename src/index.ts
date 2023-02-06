@@ -18,3 +18,7 @@ export function multiply({ a, b }: OperatorsInput): Promise<number> {
 export function divide({ a, b }: OperatorsInput): Promise<number> {
   return Promise.resolve(a / b);
 }
+
+export function equals({ a, b }: OperatorsInput): Promise<boolean> {
+  return Promise.resolve(a === b);
+}
