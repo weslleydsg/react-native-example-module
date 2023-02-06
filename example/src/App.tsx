@@ -3,7 +3,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { utils } from 'react-native-example-package';
 
-const { add, subtract, multiply, divide, equals } = utils.operators;
+const { add, subtract, multiply, divide, power, equals } = utils.operators;
 
 export default function App() {
   const [addResult, setAddResult] = React.useState<number | undefined>();
@@ -14,6 +14,7 @@ export default function App() {
     number | undefined
   >();
   const [divideResult, setDivideResult] = React.useState<number | undefined>();
+  const [powerResult, setPowerResult] = React.useState<number | undefined>();
   const [equalsResult, setEqualsResult] = React.useState<boolean | undefined>();
 
   React.useEffect(() => {
@@ -21,6 +22,7 @@ export default function App() {
     setSubtractResult(subtract(3, 7));
     setMultiplyResult(multiply(3, 7, 10));
     setDivideResult(divide(8, 2, 2));
+    setPowerResult(power(3, 3));
     setEqualsResult(equals(2, 2, 2, 2));
   }, []);
 
@@ -30,6 +32,7 @@ export default function App() {
       <Text>Subtract Result: {subtractResult}</Text>
       <Text>Multiply Result: {multiplyResult}</Text>
       <Text>Divide Result: {divideResult}</Text>
+      <Text>Power Result: {powerResult}</Text>
       <Text>Equals Result: {String(equalsResult)}</Text>
     </View>
   );

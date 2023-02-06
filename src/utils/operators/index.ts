@@ -24,6 +24,10 @@ export function divide(...[firstArg, ...restArgs]: Args): number {
   }, firstArg);
 }
 
+export function power(x: number, y = 2): number {
+  return Math.pow(x, y);
+}
+
 export function equals(...[firstArg, ...restArgs]: Args): boolean {
   return restArgs.every((value) => value === firstArg);
 }
