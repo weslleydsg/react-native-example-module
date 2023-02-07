@@ -6,6 +6,7 @@ import {
   divide,
   equals,
   multiply,
+  power,
   subtract,
 } from 'react-native-example-package';
 
@@ -18,6 +19,7 @@ export default function App() {
     number | undefined
   >();
   const [divideResult, setDivideResult] = React.useState<number | undefined>();
+  const [powerResult, setPowerResult] = React.useState<number | undefined>();
   const [equalsResult, setEqualsResult] = React.useState<boolean | undefined>();
 
   React.useEffect(() => {
@@ -25,6 +27,7 @@ export default function App() {
     subtract({ a: 3, b: 7 }).then(setSubtractResult);
     multiply({ a: 3, b: 7 }).then(setMultiplyResult);
     divide({ a: 10, b: 2 }).then(setDivideResult);
+    power({ x: 10 }).then(setPowerResult);
     equals({ a: 2, b: 2 }).then(setEqualsResult);
   }, []);
 
@@ -34,6 +37,7 @@ export default function App() {
       <Text>Subtract Result: {subtractResult}</Text>
       <Text>Multiply Result: {multiplyResult}</Text>
       <Text>Divide Result: {divideResult}</Text>
+      <Text>Power Result: {powerResult}</Text>
       <Text>Equals Result: {String(equalsResult)}</Text>
     </View>
   );
